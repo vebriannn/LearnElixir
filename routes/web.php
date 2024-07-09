@@ -3,8 +3,10 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Admin\CourseController;
+use App\Http\Controllers\Admin\KategoriController;
 
 use App\Models\Course;
+use App\Models\Kategori;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,4 +28,5 @@ Route::prefix('admin')->group(function () {
     Route::get('/course/edit/{id}', [CourseController::class, 'edit'])->name('admin.course.edit');
     Route::put('/course/edit/update/{id}', [CourseController::class, 'update'])->name('admin.course.edit.update');
     Route::get('/course/delete/{id}', [CourseController::class, 'delete'])->name('admin.course.delete');
+    Route::post('/kategori/create/store', [KategoriController::class, 'store'])->name('admin.kategori.create.store');
 });

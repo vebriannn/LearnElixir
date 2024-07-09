@@ -8,32 +8,42 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
+use App\Models\User;
 use App\Models\Course;
+use App\Models\Kategori;
 use RealRashid\SweetAlert\Facades\Alert;
+use Cviebrock\EloquentSluggable\Sluggable;
 
 class CourseController extends Controller
 {
     public function index() {
-        $items = Course::all();
+        $items = User::with('course')->findOrFail(1);
+        
         return view('admin.course', compact('items'));
     }
 
     public function create() {
-        return view('admin.coursecrud.create-course');
+        $kategori = Kategori::OrderBy('id', 'ASC')->get();
+        $checkedID =  $kategori->min('id');
+        return view('admin.coursecrud.create-course', compact('kategori', 'checkedID'));
     }
 
     public function store(Request $requests) {
 
         $data = $requests->except('_token', '_method');
 
+        // dd($data);
+
         $requests->validate([
+            // 'mentor_id' => 'required',
+            'kategori' => 'required',
             'title' => 'required',
-            'mentor' => 'required',
+            'deskripsi' => 'required',
             'images' => 'required|image|mimes:jpg,jpeg,png',
             'link' => 'required',
-            'deskripsi' => 'required',
-            'kategori' => 'required',
+            'duration' => 'required',
         ]);
+        
 
         $images = $requests->images;
         $getNameNewImages = Str::random(10).$requests->images->getClientOriginalName();
@@ -41,15 +51,20 @@ class CourseController extends Controller
         // Storage::disk('public')->put('courseImages/', $renameImages);
         
         $data['images'] = $getNameNewImages;
+        $data['mentor'] = 1;
 
-        Course::create([
+        // dd($data);
+        
+        $course = Course::create([
+            'id_mentor' => $data['mentor'],
+            'kategori' => $requests->kategori,
             'title' => $requests->title,
-            'mentor' => $requests->mentor,
+            'deskripsi' => $requests->deskripsi,
             'images' => $data['images'],
             'link' => $requests->link,
-            'deskripsi' => $requests->deskripsi,
-            'kategori' => $requests->kategori,
+            'duration' => $requests->duration,
         ]);
+        
         
         Alert::success('Success', 'Data Berhasil Di Buat');
         return redirect()->route('admin.course');

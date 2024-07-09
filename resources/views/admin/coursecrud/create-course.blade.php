@@ -44,7 +44,8 @@
                                     enctype="multipart/form-data">
                                     @csrf
                                     <div class="row g-2">
-                                        <div class="col-md me-3">
+                                        <div class="col-12 me-3">
+                                            <label for="">Title</label>
                                             <div class="form-floating">
                                                 <input type="text" class="form-control" id="floatingInputGrid"
                                                     placeholder="name@example.com" name="title">
@@ -54,20 +55,6 @@
                                                         {{ $message }}
                                                     </span>
                                                 @enderror
-                                            </div>
-                                        </div>
-                                        <div class="col-md ms-3">
-                                            <div class="form-floating">
-                                                <div class="form-floating">
-                                                    <input type="text" class="form-control" id="floatingInputGrid"
-                                                        placeholder="name@example.com" name="mentor">
-                                                    <label for="floatingInputGrid">Mentor</label>
-                                                    @error('mentor')
-                                                        <span style="color: red">
-                                                            {{ $message }}
-                                                        </span>
-                                                    @enderror
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -85,6 +72,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md ms-3">
+                                            <label for="">Link</label>
                                             <div class="form-floating">
                                                 <div class="form-floating">
                                                     <input type="url" class="form-control" id="floatingInputGrid"
@@ -99,8 +87,24 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="col-12 mt-3">
+                                        <label for="">Duration</label>
+                                        <div class="form-floating">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="floatingInputGrid"
+                                                    placeholder="name@example.com" name="duration">
+                                                <label for="floatingInputGrid">Duration</label>
+                                                @error('duration')
+                                                    <span style="color: red">
+                                                        {{ $message }}
+                                                    </span>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="row g-2 mt-4">
                                         <div class="col-md-12">
+                                            <label for="">Deskripsi</label>
                                             <div class="form-floating">
                                                 <textarea class="form-control" id="floatingTextareaGrid" placeholder="name@example.com" style="height: 200px"
                                                     name="deskripsi"></textarea>
@@ -114,30 +118,19 @@
                                         </div>
                                     </div>
                                     <div class="form-group mt-4">
-                                        <label>Kategori</label>
-                                        <div class="row mb-3 ml-1">
-                                            <div class="col-4">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="kategori"
-                                                        id="option1" checked="" value="frontend">
-                                                    <label class="form-check-label" for="option1">Front End</label>
+                                        <label for="">Kategori</label>
+                                        <div class="row">
+                                            @foreach ($kategori as $item)
+                                                <div class="col-4">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="kategori"
+                                                            id="option2" {{ $item->id == $checkedID ? 'checked' : '' }}
+                                                            value="{{ $item->name_kategori }}">
+                                                        <label class="form-check-label"
+                                                            for="option2">{{ $item->name_kategori }}</label>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-4">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="kategori"
-                                                        id="option2" value="backend">
-                                                    <label class="form-check-label" for="option2">Back End</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-4">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="kategori"
-                                                        id="option3" value="fullstack">
-                                                    <label class="form-check-label" for="option3">Full Stack
-                                                        Developer</label>
-                                                </div>
-                                            </div>
+                                            @endforeach
                                         </div>
                                     </div>
                                     <div>
@@ -154,4 +147,3 @@
         </div>
     </main>
 @endsection
-

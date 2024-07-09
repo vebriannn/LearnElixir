@@ -26,6 +26,7 @@
                                     <tr>
                                         <th>Kategori</th>
                                         <th>Title</th>
+                                        <th>Slug</th>
                                         <th>Deskripsi</th>
                                         <th>Mentor</th>
                                         <th>Image</th>
@@ -34,7 +35,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($items as $item)
+                                    @foreach ($items->course as $item)
                                         <tr>
                                             <td>
                                                 <p>{{ $item->kategori }}</p>
@@ -42,11 +43,14 @@
                                             <td>
                                                 <p>{{ $item->title }}</p>
                                             </td>
+                                            <td>
+                                                <p>{{ $item->slug }}</p>
+                                            </td>
                                             <td style="width: 40%;">
                                                 <p>{{ $item->deskripsi }}</p>
                                             </td>
                                             <td>
-                                                <p>{{ $item->mentor }}</p>
+                                                <p>{{ $items->name }}</p>
                                             </td>
                                             <td>
                                                 <p>{{ $item->images }}</p>
@@ -106,7 +110,7 @@
                         showCancelButton: true,
                         confirmButtonColor: '#3085d6',
                         cancelButtonColor: '#d33',
-                        confirmButtonText: 'Ye',
+                        confirmButtonText: 'Yes',
                         cancelButtonText: 'TIdak'
                     }).then((result) => {
                         if (result.isConfirmed) {

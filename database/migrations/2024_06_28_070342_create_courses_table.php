@@ -13,13 +13,17 @@ return new class extends Migration
     {
         Schema::create('tbl_course', function (Blueprint $table) {
             $table->id();
-            $table->enum('kategori', ['frontend', 'backend', 'fullstack']);
+            $table->unsignedBigInteger('id_mentor');
+            $table->string('kategori');
             $table->string('title');
+            $table->string('slug');
             $table->string('deskripsi');
-            $table->string('mentor');
             $table->string('images');
             $table->string('link');
+            $table->string('duration');
             $table->timestamps();
+
+            $table->foreign('id_mentor')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
@@ -28,6 +32,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('courses');
+        Schema::dropIfExists('tbl_course');
     }
 };
