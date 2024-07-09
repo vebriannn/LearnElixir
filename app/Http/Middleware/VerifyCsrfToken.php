@@ -12,6 +12,7 @@ class VerifyCsrfToken extends Middleware
      * @var array<int, string>
      */
     protected $except = [
+        'admin/course/create/store',
         'admin/kategori/create/store'
     ];
 }

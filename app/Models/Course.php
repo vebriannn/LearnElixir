@@ -10,11 +10,11 @@ use App\Models\User;
 
 class Course extends Model
 {
-    use HasFactory;
     use Sluggable;
+    use HasFactory;
 
     protected $table = 'tbl_course';
-
+    
     protected $fillable = [
         'id_mentor',
         'kategori',
@@ -23,6 +23,7 @@ class Course extends Model
         'images',
         'link',
         'duration',
+        'total_lesson'
     ];
 
     public function sluggable(): array
@@ -38,5 +39,4 @@ class Course extends Model
         return $this->belongsTo(User::class, 'id_mentor');
     }
 
-    
 }

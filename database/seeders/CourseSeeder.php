@@ -17,7 +17,7 @@ class CourseSeeder extends Seeder
         
         Course::create([
             'mentor_id' => 1,
-            'kategori' => 'backend',
+            'kategori' => 'Backend Developer',
             'title' => 'membuat website jual beli gedang',
             'slug' => 'membuat-website-jual-beli-gedang',
             'deskripsi' => 'lorem isum',

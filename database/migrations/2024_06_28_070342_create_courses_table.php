@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('images');
             $table->string('link');
             $table->string('duration');
+            $table->integer('total_lesson');
             $table->timestamps();
 
             $table->foreign('id_mentor')->references('id')->on('users')->onDelete('cascade');

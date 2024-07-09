@@ -43,19 +43,17 @@
                                 <form action="{{ route('admin.course.create.store') }}" method="POST"
                                     enctype="multipart/form-data">
                                     @csrf
-                                    <div class="row g-2">
-                                        <div class="col-12 me-3">
-                                            <label for="">Title</label>
-                                            <div class="form-floating">
-                                                <input type="text" class="form-control" id="floatingInputGrid"
-                                                    placeholder="name@example.com" name="title">
-                                                <label for="floatingInputGrid">Title</label>
-                                                @error('title')
-                                                    <span style="color: red">
-                                                        {{ $message }}
-                                                    </span>
-                                                @enderror
-                                            </div>
+                                    <div class="col-12 me-3">
+                                        <label for="">Title</label>
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="floatingInputGrid"
+                                                placeholder="name@example.com" name="title">
+                                            <label for="floatingInputGrid">Title</label>
+                                            @error('title')
+                                                <span style="color: red">
+                                                    {{ $message }}
+                                                </span>
+                                            @enderror
                                         </div>
                                     </div>
                                     <div class="row g-2 mt-4">
@@ -72,7 +70,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md ms-3">
-                                            <label for="">Link</label>
+                                            <label for="">Link Video</label>
                                             <div class="form-floating">
                                                 <div class="form-floating">
                                                     <input type="url" class="form-control" id="floatingInputGrid"
@@ -90,19 +88,17 @@
                                     <div class="col-12 mt-3">
                                         <label for="">Duration</label>
                                         <div class="form-floating">
-                                            <div class="form-floating">
-                                                <input type="text" class="form-control" id="floatingInputGrid"
-                                                    placeholder="name@example.com" name="duration">
-                                                <label for="floatingInputGrid">Duration</label>
-                                                @error('duration')
-                                                    <span style="color: red">
-                                                        {{ $message }}
-                                                    </span>
-                                                @enderror
-                                            </div>
+                                            <input type="text" class="form-control" id="floatingInputGrid"
+                                                placeholder="name@example.com" name="duration">
+                                            <label for="floatingInputGrid">Duration</label>
+                                            @error('duration')
+                                                <span style="color: red">
+                                                    {{ $message }}
+                                                </span>
+                                            @enderror
                                         </div>
                                     </div>
-                                    <div class="row g-2 mt-4">
+                                    <div class="row g-2 mt-3">
                                         <div class="col-md-12">
                                             <label for="">Deskripsi</label>
                                             <div class="form-floating">
@@ -118,16 +114,16 @@
                                         </div>
                                     </div>
                                     <div class="form-group mt-4">
-                                        <label for="">Kategori</label>
-                                        <div class="row">
+                                        <label>Kategori</label>
+                                        <div class="row mb-3 ml-1">
                                             @foreach ($kategori as $item)
                                                 <div class="col-4">
                                                     <div class="form-check">
                                                         <input class="form-check-input" type="radio" name="kategori"
-                                                            id="option2" {{ $item->id == $checkedID ? 'checked' : '' }}
+                                                            id="option1" {{ $item->id == $checked ? 'checked' : '' }}
                                                             value="{{ $item->name_kategori }}">
                                                         <label class="form-check-label"
-                                                            for="option2">{{ $item->name_kategori }}</label>
+                                                            for="optionx1">{{ $item->name_kategori }}</label>
                                                     </div>
                                                 </div>
                                             @endforeach

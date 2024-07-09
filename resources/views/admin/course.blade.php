@@ -31,6 +31,8 @@
                                         <th>Mentor</th>
                                         <th>Image</th>
                                         <th>Link</th>
+                                        <th>Duration</th>
+                                        <th>Total Lesson</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -58,6 +60,13 @@
                                             <td>
                                                 <p style="color:blue; text-decoration: underline;">{{ $item->link }}</p>
                                             </td>
+                                            <td>
+                                                <p>{{ $item->duration }}</p>
+                                            </td>
+                                            <td>
+                                                <p>{{ $item->total_lesson }}</p>
+                                            </td>
+
                                             <td class="d-flex justify-content-center">
                                                 <a href="{{ route('admin.course.edit', $item->id) }}"
                                                     class="btn btn-warning btn-sm mb-2" style="margin-right: 1rem; ">
@@ -110,7 +119,7 @@
                         showCancelButton: true,
                         confirmButtonColor: '#3085d6',
                         cancelButtonColor: '#d33',
-                        confirmButtonText: 'Yes',
+                        confirmButtonText: 'Ye',
                         cancelButtonText: 'TIdak'
                     }).then((result) => {
                         if (result.isConfirmed) {

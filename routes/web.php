@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\KategoriController;
+use App\Http\Controllers\Api\ApiCourseController;
+use App\Http\Controllers\Member\DashboardController as MemberDashboardController;
 
 use App\Models\Course;
 use App\Models\Kategori;
@@ -30,3 +32,8 @@ Route::prefix('admin')->group(function () {
     Route::get('/course/delete/{id}', [CourseController::class, 'delete'])->name('admin.course.delete');
     Route::post('/kategori/create/store', [KategoriController::class, 'store'])->name('admin.kategori.create.store');
 });
+
+Route::get('api/v1/course', [ApiCourseController::class, 'course']);
+Route::get('member/course/{slug}', [MemberDashboardController::class, 'index'])->name('member.dashboard');
+
+Route::view('/', 'member.course');

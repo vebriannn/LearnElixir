@@ -18,29 +18,25 @@ class CourseController extends Controller
 {
     public function index() {
         $items = User::with('course')->findOrFail(1);
-        
         return view('admin.course', compact('items'));
     }
 
     public function create() {
         $kategori = Kategori::OrderBy('id', 'ASC')->get();
-        $checkedID =  $kategori->min('id');
-        return view('admin.coursecrud.create-course', compact('kategori', 'checkedID'));
+        $checked =  $kategori->min('id');
+        return view('admin.coursecrud.create-course', compact('kategori', 'checked'));
     }
 
     public function store(Request $requests) {
 
         $data = $requests->except('_token', '_method');
 
-        // dd($data);
-
         $requests->validate([
-            // 'mentor_id' => 'required',
-            'kategori' => 'required',
             'title' => 'required',
-            'deskripsi' => 'required',
             'images' => 'required|image|mimes:jpg,jpeg,png',
             'link' => 'required',
+            'deskripsi' => 'required',
+            'kategori' => 'required',
             'duration' => 'required',
         ]);
         
@@ -51,18 +47,15 @@ class CourseController extends Controller
         // Storage::disk('public')->put('courseImages/', $renameImages);
         
         $data['images'] = $getNameNewImages;
-        $data['mentor'] = 1;
-
-        // dd($data);
         
         $course = Course::create([
-            'id_mentor' => $data['mentor'],
-            'kategori' => $requests->kategori,
             'title' => $requests->title,
-            'deskripsi' => $requests->deskripsi,
+            'id_mentor' => 1,
             'images' => $data['images'],
             'link' => $requests->link,
-            'duration' => $requests->duration,
+            'deskripsi' => $requests->deskripsi,
+            'kategori' => $requests->kategori,
+            'duration' => $requests->duration
         ]);
         
         

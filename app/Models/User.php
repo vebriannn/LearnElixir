@@ -4,12 +4,10 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-use App\Models\Course;
 
 class User extends Authenticatable
 {
@@ -24,7 +22,7 @@ class User extends Authenticatable
         'avatar',
         'name',
         'role',
-        'divisi',
+        'devisi',
         'email',
         'password',
     ];
@@ -49,6 +47,6 @@ class User extends Authenticatable
     ];
 
     public function course() {
-        return $this->hasMany(Course::class, 'id_mentor', 'id');
+        return $this->HasMany(Course::class, 'id_mentor');
     }
 }
