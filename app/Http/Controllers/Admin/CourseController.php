@@ -38,6 +38,7 @@ class CourseController extends Controller
             'deskripsi' => 'required',
             'kategori' => 'required',
             'duration' => 'required',
+            'total_lesson' => 'required',
         ]);
         
 
@@ -55,7 +56,8 @@ class CourseController extends Controller
             'link' => $requests->link,
             'deskripsi' => $requests->deskripsi,
             'kategori' => $requests->kategori,
-            'duration' => $requests->duration
+            'duration' => $requests->duration,
+            'total_lesson' => $requests->total_lesson,
         ]);
         
         
@@ -66,7 +68,9 @@ class CourseController extends Controller
 
     public function edit($id) {
         $items = Course::where('id', $id)->first();
-        return view('admin.coursecrud.edit-course', compact('items'));
+        $kategori = Kategori::OrderBy('id', 'ASC')->get();
+        $checked =  $items->kategori;
+        return view('admin.coursecrud.edit-course', compact('items', 'kategori', 'checked'));
     }
 
     public function update(Request $requests, $id) {
@@ -76,11 +80,14 @@ class CourseController extends Controller
 
         $requests->validate([
             'title' => 'required',
-            'mentor' => 'required',
             'link' => 'required|url',
             'deskripsi' => 'required',
             'kategori' => 'required',
+            'duration' => 'required',
+            'total_lesson' => 'required',
         ]);
+
+        $data['id_mentor'] = 1;
 
         if($requests->images) {
             // check apakah images berupa jpg, jpeg, png
@@ -99,11 +106,13 @@ class CourseController extends Controller
 
         $course->update([
             'title' => $requests->title,
-            'mentor' => $requests->mentor,
+            'id_mentor' => $data['id_mentor'],
             'images' => $data['images'],
             'link' => $requests->link,
             'deskripsi' => $requests->deskripsi,
             'kategori' => $requests->kategori,
+            'duration' => $requests->duration,
+            'total_lesson' => $requests->total_lesson,
         ]);
 
         Alert::success('Success', 'Data Berhasil Di Edit');
@@ -115,7 +124,6 @@ class CourseController extends Controller
         $course = Course::where('id', $id)->first();
         Storage::disk('public')->delete('courseImages/'.$course->images);
         $course->delete();
-
         Alert::success('Success', 'Data Berhasil Di Hapus');
         return redirect()->route('admin.course');
     }

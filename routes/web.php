@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\KategoriController;
 use App\Http\Controllers\Api\ApiCourseController;
 use App\Http\Controllers\Member\DashboardController as MemberDashboardController;
+use App\Http\Controllers\Member\CourseController as MemberCourseController;
 
 use App\Models\Course;
 use App\Models\Kategori;
@@ -34,6 +35,8 @@ Route::prefix('admin')->group(function () {
 });
 
 Route::get('api/v1/course', [ApiCourseController::class, 'course']);
+Route::get('api/v1/kategori', [ApiCourseController::class, 'kategori']);
+Route::get('api/v1/course', [ApiCourseController::class, 'apiFilterKategori']);
 Route::get('member/course/{slug}', [MemberDashboardController::class, 'index'])->name('member.dashboard');
 
-Route::view('/', 'member.course');
+Route::get('/', [MemberCourseController::class, 'index']);

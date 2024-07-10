@@ -17,10 +17,10 @@ class UserSeeders extends Seeder
     {
         User::create([
             'avatar' => 'yans.jpg',
-            'name' => 'vebrian',
+            'name' => 'Jasim',
             'role' => 'mentor',
-            'divisi' => 'fullstack dev',
-            'email' => 'vebr@gmail.com',
+            'divisi' => 'Backend Developer',
+            'email' => 'jasim@gmail.com',
             'password' => Hash::make('vebrian')
         ]);
     }

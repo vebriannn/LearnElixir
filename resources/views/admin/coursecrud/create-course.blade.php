@@ -85,21 +85,36 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 mt-3">
-                                        <label for="">Duration</label>
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="floatingInputGrid"
-                                                placeholder="name@example.com" name="duration">
-                                            <label for="floatingInputGrid">Duration</label>
-                                            @error('duration')
-                                                <span style="color: red">
-                                                    {{ $message }}
-                                                </span>
-                                            @enderror
+                                    <div class="row g-2 mt-4">
+                                        <div class="col-6 mt-3">
+                                            <label for="">Duration</label>
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="floatingInputGrid"
+                                                    placeholder="name@example.com" name="duration">
+                                                <label for="floatingInputGrid">Duration</label>
+                                                @error('duration')
+                                                    <span style="color: red">
+                                                        {{ $message }}
+                                                    </span>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-6 mt-3">
+                                            <label for="">Lesson</label>
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="floatingInputGrid"
+                                                    placeholder="name@example.com" name="total_lesson">
+                                                <label for="floatingInputGrid">Lesson</label>
+                                                @error('total_lesson')
+                                                    <span style="color: red">
+                                                        {{ $message }}
+                                                    </span>
+                                                @enderror
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="row g-2 mt-3">
-                                        <div class="col-md-12">
+                                        <div class="col-12">
                                             <label for="">Deskripsi</label>
                                             <div class="form-floating">
                                                 <textarea class="form-control" id="floatingTextareaGrid" placeholder="name@example.com" style="height: 200px"
@@ -112,34 +127,36 @@
                                                 @enderror
                                             </div>
                                         </div>
+
                                     </div>
-                                    <div class="form-group mt-4">
-                                        <label>Kategori</label>
-                                        <div class="row mb-3 ml-1">
-                                            @foreach ($kategori as $item)
-                                                <div class="col-4">
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="kategori"
-                                                            id="option1" {{ $item->id == $checked ? 'checked' : '' }}
-                                                            value="{{ $item->name_kategori }}">
-                                                        <label class="form-check-label"
-                                                            for="optionx1">{{ $item->name_kategori }}</label>
-                                                    </div>
-                                                </div>
-                                            @endforeach
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <button class="btn btn-primary my-5" type="Submit">Submit</button>
-                                    </div>
-                                </form>
                             </div>
+                            <div class="form-group mt-4">
+                                <label>Kategori</label>
+                                <div class="row mb-3 ml-1">
+                                    @foreach ($kategori as $item)
+                                        <div class="col-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="kategori"
+                                                    id="option1" {{ $item->id == $checked ? 'checked' : '' }}
+                                                    value="{{ $item->name_kategori }}">
+                                                <label class="form-check-label"
+                                                    for="optionx1">{{ $item->name_kategori }}</label>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
+                            </div>
+                            <div>
+                                <button class="btn btn-primary my-5" type="Submit">Submit</button>
+                            </div>
+                            </form>
                         </div>
                     </div>
-                    <!-- /.container-fluid -->
                 </div>
-                <!-- End of Main Content -->
+                <!-- /.container-fluid -->
             </div>
+            <!-- End of Main Content -->
+        </div>
         </div>
     </main>
 @endsection

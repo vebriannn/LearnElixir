@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Resources\API;
+namespace App\Http\Resources\Api;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class KategoriController extends JsonResource
+class ApiKategori extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -14,6 +14,9 @@ class KategoriController extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        return parent::toArray($request);
+        return [
+            'id' => $this->id,
+            'kategori' => $this->name_kategori,
+        ];
     }
 }
