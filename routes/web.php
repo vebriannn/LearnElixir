@@ -5,8 +5,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\KategoriController;
 use App\Http\Controllers\Api\ApiCourseController;
+use App\Http\Controllers\Admin\Auth\LoginController as AdminLoginController;
 use App\Http\Controllers\Member\DashboardController as MemberDashboardController;
 use App\Http\Controllers\Member\CourseController as MemberCourseController;
+use App\Http\Controllers\Member\Auth\LoginController as MemberLoginController;
+use App\Http\Controllers\Member\Auth\RegisterController as MemberRegisterController;
 
 use App\Models\Course;
 use App\Models\Kategori;
@@ -22,8 +25,15 @@ use App\Models\Kategori;
 |
 */
 
+// authen member
+Route::post('/login', [MemberLoginController::class, 'login']);
+Route::get('/logout', [MemberLoginController::class, 'logout'])->name('logout');
+
+// registrasi member
+Route::post('/registrasi', [MemberRegisterController::class, 'store'])->name('member.registrasi.store');
 
 Route::prefix('admin')->group(function () {
+    Route::post('/login', [AdminLoginController::class, 'login'])->name('admin.login');
     Route::view('/', 'admin.dashboard')->name('admin.dashboard');
     Route::get('/course', [CourseController::class, 'index'])->name('admin.course');
     Route::get('/course/create', [CourseController::class, 'create'])->name('admin.course.create');
@@ -39,4 +49,9 @@ Route::get('api/v1/kategori', [ApiCourseController::class, 'kategori']);
 Route::get('api/v1/course', [ApiCourseController::class, 'apiFilterKategori']);
 Route::get('member/course/{slug}', [MemberDashboardController::class, 'index'])->name('member.dashboard');
 
-Route::get('/', [MemberCourseController::class, 'index']);
+Route::get('/', [MemberCourseController::class, 'index'])->name('member.course');
+
+Route::prefix('member')->group(function () {
+    Route::view('/', 'member.user')->name('member.join')->middleware('member.middleware');
+    Route::view('/play', 'member.user_video')->name('member.play');
+});

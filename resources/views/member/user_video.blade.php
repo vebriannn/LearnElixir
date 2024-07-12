@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Materi</title>
-    <link rel="stylesheet" href="../css/user_video.css">
+    <title>Learn Elixir | Play Video</title>
+    <link rel="stylesheet" href="{{ asset('learnelixir/assets/css/user_video.css') }}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -14,36 +14,7 @@
 </head>
 
 <body>
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg bg-white container mt-3  shadow">
-        <div class="container mx-3">
-            <a class=" fs-4 fw-bold logo" href="#">Learn<span>Elixir</span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item me-4" id="navbarNav">
-                        <a class="nav-link active" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item me-4" id="navbarNav">
-                        <a class="nav-link" href="#about">About Us</a>
-                    </li>
-                    <li class="nav-item me-4" id="navbarNav">
-                        <a class="nav-link" href="#course">Course</a>
-                    </li>
-                    <li class="nav-item" id="navbarNav">
-                        <a class="nav-link" href="#contact">Contact Us</a>
-                    </li>
-                </ul>
-                <div class="profile d-flex justify-content-center align-item-center px-2">
-                    <a href=""><img src="./image/profile.png" alt=""></a>
-                    <a href="" class="text-profile">Verxxy12</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+
 
     <div class="custom-container" id="content">
         <h3 class=" mt-5">Belajar Livewire Menengah: Membuat Aplikasi Manajemen Karyawan Sederhana</h3>
@@ -126,7 +97,7 @@
                 </div>
             </div>
             <div class="col-8 d-flex flex-column">
-                <img src="./image/Design.jpg" alt="">
+                <img src="{{ asset('learnelixir/assets/image/Design.jpg') }}" alt="">
                 <button class="btn btn-primary btn-play mt-3 mb-3 ms-auto">Complete</button>
             </div>
         </div>

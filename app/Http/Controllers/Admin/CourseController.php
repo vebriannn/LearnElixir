@@ -30,7 +30,6 @@ class CourseController extends Controller
     public function store(Request $requests) {
 
         $data = $requests->except('_token', '_method');
-
         $requests->validate([
             'title' => 'required',
             'images' => 'required|image|mimes:jpg,jpeg,png',

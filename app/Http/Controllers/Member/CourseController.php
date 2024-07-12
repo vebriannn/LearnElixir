@@ -11,8 +11,8 @@ use App\Models\Kategori;
 class CourseController extends Controller
 {
     public function index() {
-        $kategori = Kategori::all();
-        
-        return view('member.course', compact('kategori'));
+        // $kategori = Kategori::all();
+
+        return view('member.course');
     }
 }

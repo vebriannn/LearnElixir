@@ -22,7 +22,7 @@
             </ul>
             <div class="profile d-flex justify-content-center align-item-center px-2">
                 <a href=""><img src="{{asset('learnelixir/assets/image/profile.png')}}" alt=""></a>
-                <a href="" class="text-profile">Verxxy12</a>
+                <a href="" class="text-profile">{{Auth::user()->name}}</a>
             </div>
         </div>
     </div>

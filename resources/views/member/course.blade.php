@@ -16,7 +16,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-9 flex-warp row d-flex  " id="course-container">
+            <div class="col-9 flex-warp row d-flex" id="course-container">
             </div>
         </div>
     </div>
@@ -48,7 +48,7 @@
                             const courseElement = document.createElement('div');
                             courseElement.className = 'col-lg-4 col-sm-6 mt-sm-4 mt-xl-0 mt-lg-0';
                             courseElement.innerHTML = `
-                                <a href="user_course.html" onclick="navigateToPage(event, 'user_course.html')">
+                                <a href="{{route('member.join')}}">
                                     <div class="card-course mb-5">
                                         <img src="${course.images}" class="img-card" alt="${course.title}" id="imgCourse">
                                             <div class="container-card px-4 mt-2">
@@ -79,12 +79,6 @@
 
         // Call the function to fetch and display courses
         fetchAndDisplayCourses();
-
-        // Dummy function to prevent actual navigation during testing
-        function navigateToPage(event, url) {
-            event.preventDefault();
-            console.log('Navigating to:', url);
-        }
     </script>
 
     <script>
@@ -137,7 +131,7 @@
                         courseData.course.forEach(course => {
                             courseElement.className = 'col-lg-4 col-sm-6 mt-sm-4 mt-xl-0 mt-lg-0';
                             courseElement.innerHTML = `
-                                <a href="user_course.html" onclick="navigateToPage(event, 'user_course.html')">
+                                <a href="{{route('member.join')}}">
                                     <div class="card-course mb-5">
                                         <img src="${course.images}" class="img-card" alt="${course.title}" id="imgCourse">
                                             <div class="container-card px-4 mt-2">

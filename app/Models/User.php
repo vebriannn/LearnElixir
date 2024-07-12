@@ -22,7 +22,7 @@ class User extends Authenticatable
         'avatar',
         'name',
         'role',
-        'devisi',
+        'divisi',
         'email',
         'password',
     ];
