@@ -1,0 +1,157 @@
+:root {
+  --c-dark: #383131;
+  --c-brand: #00a3ff;
+  --c-brand-dark: #407c95;
+  --c-brand-light: #2b9ccc;
+  --c-brand-footer: #80deff;
+  --c-brand-contact: #c2efff;
+  --c-brand-rgb: 0, 163, 255;
+  --c-body: #ffffff;
+  --c-gradient: linear-gradient(to top left, #7bdcff 15%, #fff 85%);
+  --font-base: "Poppins", sans-serif;
+  --box-shadow-card: 0px 0px 15px #00a3ff;
+  --box-shadow-card-light: 0px 0px 5px #00a3ff;
+  --transition: all 0.5s ease;
+}
+
+body {
+  font-family: var(--font-base) !important;
+  line-height: 1.7;
+  height: 100vh;
+}
+
+span {
+  color: var(--c-brand);
+}
+
+a {
+  text-decoration: none !important;
+}
+
+img{
+    width: 100%;
+}
+
+/* NAVBAR */
+.navbar {
+  box-shadow: var(--box-shadow);
+  border-radius: 20px;
+  background-color: hsl(202, 100%, 90%, 0.3) !important;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 400;
+  color: var(--c-dark);
+}
+
+.logo {
+  color: var(--c-brand-light);
+}
+
+.navbar-nav .nav-item .active {
+  color: var(--c-brand) !important;
+  font-weight: 700;
+}
+
+.navbar img {
+  width: 60%;
+}
+
+.profile a {
+  width: 65px;
+}
+
+.profile {
+  justify-content: center;
+  align-items: center;
+}
+
+.text-profile {
+  font-weight: 400;
+  color: var(--c-dark);
+}
+
+/* CONTENT */
+.top {
+  padding-top: 65px;
+}
+
+.custom-container {
+  max-width: 1220px; /* Example: Custom width */
+  margin: 0 auto; /* Center the container */
+  padding: 0; /* Add some padding */
+}
+
+#content h3 {
+  font-weight: 600 !important;
+  font-size: 30px !important;
+  white-space: nowrap !important;
+}
+
+#content img {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.border-bottom{
+    border-bottom: 2px solid white !important;
+    width: 100% !important;
+  }
+
+  .costum-card{
+    background-color: var(--c-brand) !important;
+    border: none !important;
+  }
+
+  .btn-video{
+    background-color: var(--c-brand-contact) !important;
+    border: none !important;
+    color: #3D5963 !important;
+    font-size: 17px;
+    width: 261px;
+    height: 50px;
+    border-radius: 20px !important;
+    align-items: center;
+   }
+
+   .btn-video:hover{
+    background-color: var(--c-brand-contact);
+    color: #3D5963;
+   }
+
+   .btn-video{
+    background-color: var(--c-brand-contact);
+    color: #383131;
+   }
+
+   .btn-video img{
+    width: auto;
+    height: 70%;
+    margin: auto 0;
+   }
+   
+   .play{
+    width: auto;
+    height: 100%;
+    margin: auto 0;
+   }
+
+   .btn-play{
+    width: 100px;
+    height: 40px;
+    border-radius: 20px !important;
+    background-color: var(--c-brand) !important;
+    border: none !important;
+   }
+
+   .form-check-input{
+    padding: 10px;
+    border-radius: 50% !important;
+    border: 1px solid black;
+   }
+
+   .costum-card{
+    height: 537px !important;
+    overflow-y: auto;
+    overflow-x: hidden;
+   }

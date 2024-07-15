@@ -1,0 +1,41 @@
+/**
+* @license
+*
+* Font Family: Poppins
+* Designed by: Jonny Pinhorn, Indian Type Foundry
+* URL: https://www.fontshare.com/fonts/poppins
+* © 2024 Indian Type Foundry
+*
+* Poppins Thin 
+* Poppins ThinItalic 
+* Poppins ExtraLight 
+* Poppins ExtraLightItalic 
+* Poppins Light 
+* Poppins LightItalic 
+* Poppins Regular 
+* Poppins Italic 
+* Poppins Medium 
+* Poppins MediumItalic 
+* Poppins SemiBold 
+* Poppins SemiBoldItalic 
+* Poppins Bold 
+* Poppins BoldItalic 
+* Poppins ExtraBold 
+* Poppins ExtraBoldItalic 
+* Poppins Black 
+* Poppins BlackItalic 
+* Poppins Variable (Variable font)
+* Poppins VariableItalic (Variable font)
+
+*
+*/
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Variable.woff2') format('woff2'),
+       url('../fonts/Poppins-Variable.woff') format('woff'),
+       url('../fonts/Poppins-Variable.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
+
