@@ -62,28 +62,13 @@
                                     </div>
                                     <div class="row g-2 mt-4">
                                         <div class="col-md me-3">
+                                            <label for="image">Upload Image</label>
                                             <div class="form-group col-6 mt-2">
-                                                <label for="image">Upload Image</label>
                                                 <input type="file" class="form-control-file" id="image"
                                                     aria-describedby="imageHelp" name="images">
                                             </div>
                                         </div>
-                                        <div class="col-md ms-3">
-                                            <label for="">Link</label>
-                                            <div class="form-floating">
-                                                <div class="form-floating">
-                                                    <input type="url" class="form-control" id="floatingInputGrid"
-                                                        placeholder="name@example.com" value="{{ $items->link }}"
-                                                        name="link">
-                                                    <label for="floatingInputGrid">Link</label>
-                                                    @error('link')
-                                                        <span style="color: red">
-                                                            {{ $message }}
-                                                        </span>
-                                                    @enderror
-                                                </div>
-                                            </div>
-                                        </div>
+
                                     </div>
                                     <div class="row g-2 mt-4">
                                         <div class="col-6 mt-3">
@@ -137,7 +122,8 @@
                                                 <div class="col-4">
                                                     <div class="form-check">
                                                         <input class="form-check-input" type="radio" name="kategori"
-                                                            id="option1" {{ $item->name_kategori == $checked ? 'checked' : '' }}
+                                                            id="option1"
+                                                            {{ $item->name_kategori == $checked ? 'checked' : '' }}
                                                             value="{{ $item->name_kategori }}">
                                                         <label class="form-check-label"
                                                             for="optionx1">{{ $item->name_kategori }}</label>

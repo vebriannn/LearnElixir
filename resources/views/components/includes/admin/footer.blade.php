@@ -1,12 +1,9 @@
-<footer class="app-footer">
-    <!--begin::To the end-->
-    <div class="float-end d-none d-sm-inline">Anything you want</div>
-    <!--end::To the end-->
+<footer class="app-footer d-flex">
     <!--begin::Copyright-->
-    <strong>
-        Copyright &copy; 2014-2023
-        <a href="https://adminlte.io">AdminLTE.io</a>.
+    <strong class="mx-auto">
+        Copyright &copy; 2024
+        <a href="">Learn<span>Elixir</span></a>
+        All rights reserved.
     </strong>
-    All rights reserved.
     <!--end::Copyright-->
 </footer>

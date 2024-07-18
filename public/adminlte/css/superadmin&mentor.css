@@ -1,0 +1,188 @@
+:root {
+    --c-dark: #383131;
+    --c-brand: #00a3ff;
+    --c-brand-dark: #407c95;
+    --c-brand-light: #2b9ccc;
+    --c-brand-footer: #80deff;
+    --c-brand-contact: #c2efff;
+    --c-brand-rgb: 0, 163, 255;
+    --c-body: #ffffff;
+    --c-gradient: linear-gradient(to top left, #7bdcff 15%, #fff 85%);
+    --font-base: "Poppins", sans-serif;
+    --box-shadow-card: 0px 0px 15px #00a3ff;
+    --box-shadow-card-light: 0px 0px 5px #00a3ff;
+    --transition: all 0.5s ease;
+  }
+  
+  body {
+    font-family: var(--font-base) !important;
+    line-height: 1.7;
+    color: var(--c-body);
+    height: 100vh;
+  }
+  
+  span {
+      color: var(--c-brand);
+    }
+    
+    a{
+      text-decoration: none !important;
+    }
+
+    /* NAVBAR */
+
+    .navbar{
+        background-color: var(--c-brand) !important;
+    }
+
+    .search{
+        width: max-content;
+        display: flex;
+        align-items: center;
+        padding: 0px 30px;
+        border-radius: 28px;
+        background: transparent;
+        transition: box-shadow 0.25s;
+        border: 1px solid rgba(0, 0, 0, 0.347);
+    }
+
+    .search-input{
+        font-size: 16px;
+        font-family: 'Poppins', sans-serif;
+        margin-left: 14px;
+        outline: none;
+        border: 1px;
+        background: transparent;
+        flex: 1;
+        width: 100px;
+        color: rgba(255, 255, 255, 0.785);
+    }
+
+    .search-input::placeholder{
+        color: rgba(255, 255, 255, 0.43);
+    }
+
+    .fa-search{
+        color: rgba(0, 0, 0, 0.441);
+    }
+
+    /* SIDEBAR */
+    .app-sidebar{
+        background-color: white !important;
+    }
+
+    .sidebar-brand{
+        border: none;
+    }
+
+    .brand-text{
+        color: var(--c-brand-dark) !important;
+    }
+
+    .costum-white{
+        border: 1px solid var(--c-brand) !important;
+        width: 85% !important;
+        margin: 0 auto;
+        font-weight: bold;
+        color: var(--c-brand) !important;
+    }
+    
+
+    .costum-white p, .costum-white i{
+        color: var(--c-brand) !important;
+        justify-content: center;
+    }
+
+    .costum-blue{
+        background-color: var(--c-brand) !important;
+        border-radius: 10px;
+        width: 85% !important;
+        margin: 0 auto;
+        font-weight: bold;
+    }
+
+
+    .costum-blue p, .costum-blue i{
+        color: white !important;
+        justify-content: center;
+    }
+
+    .costum-blue-dropdown{
+        background-color: var(--c-brand) !important;
+        border-bottom-left-radius: 0px !important;
+        border-bottom-right-radius:0px !important;
+        width: 100% !important;
+        height: 100%;
+        margin: 0 auto;
+        font-weight: bold;
+    }
+
+    .costum-blue-dropdown p , .costum-blue-dropdown i{
+        color: white !important;
+    }
+
+    .menu-open .nav-link.active-link {
+        color: red;
+    }
+
+    .dropdown-dashboard{
+        width: 100% !important;
+        border-top: 1px solid var(--c-brand);
+        border-radius: 0px !important;
+        margin: 0 auto;
+        font-weight: bold;
+        margin-bottom: 0px !important;
+    }
+
+    .dropdown-dashboard-active{
+        width: 100% !important;
+        border-top: 1px solid var(--c-brand);
+        border-radius: 0px !important;
+        margin: 0 auto;
+        font-weight: bold;
+        background-color: var(--c-brand) !important;
+        margin-bottom: 0px !important;
+    }
+
+    .dropdown-dashboard-active p{
+        color: white !important;
+    }
+
+    .dropdown-dashboard-active-down{
+        width: 100% !important;
+        border-top: 1px solid var(--c-brand);
+        border-top-left-radius: 0px !important;
+        border-top-right-radius: 0px !important;
+        margin: 0 auto;
+        font-weight: bold;
+        background-color: var(--c-brand) !important;
+        margin-bottom: 0px !important;
+    }
+
+    .dropdown-dashboard-active-down p{
+        color: white !important;
+    }
+    
+
+
+    .dashboard{
+        width: 85% !important;
+        border: 1px solid var(--c-brand);
+        border-radius: 10px;
+    }
+
+    .dashboard p, .dashboard i{
+        color: var(--c-brand);
+    }
+
+
+    /* TABLE */
+    .shadow-card{
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.312) !important;
+        transition: 0.3s;
+    }
+
+    .shadow-card:hover{
+        box-shadow: var(--box-shadow-card) !important;
+    }
+

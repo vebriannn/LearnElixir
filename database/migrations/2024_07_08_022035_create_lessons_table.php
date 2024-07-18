@@ -15,8 +15,6 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('id_course');
             $table->string('title_lesson');
-            $table->integer('time_lesson');
-            $table->integer('lesson');
             $table->timestamps();
 
             $table->foreign('id_course')->references('id')->on('tbl_course')->onDelete('cascade');

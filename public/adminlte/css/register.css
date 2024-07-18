@@ -1,0 +1,136 @@
+:root {
+    --c-dark: #383131;
+    --c-brand: #00a3ff;
+    --c-brand-dark: #407c95;
+    --c-brand-light: #2b9ccc;
+    --c-brand-footer: #80deff;
+    --c-brand-contact: #c2efff;
+    --c-brand-rgb: 0, 163, 255;
+    --c-body: #ffffff;
+    --c-gradient: linear-gradient(to top left, #7bdcff 15%, #fff 85%);
+    --font-base: "Poppins", sans-serif;
+    --box-shadow-card: 0px 0px 15px #00a3ff;
+    --box-shadow-card-light: 0px 0px 5px #00a3ff;
+    --transition: all 0.5s ease;
+  }
+  
+  body {
+    font-family: var(--font-base) !important;
+    line-height: 1.7;
+    color: var(--c-body);
+    height: 100vh;
+  }
+  
+  span {
+      color: var(--c-brand);
+    }
+    
+    a{
+      text-decoration: none !important;
+    }
+
+    img{
+        width: 85%;
+        height: auto;
+    }
+
+    .card{
+        background-color: var(--c-brand) !important;
+        transition: var(--transition);
+        border: none !important;
+        border-radius: 50px !important;
+        height: 700px !important;
+    }
+
+    .btn-primary{
+        background-color: var(--c-brand) !important;
+        color: white !important;
+        border: none !important;
+    }
+
+    .content{
+        margin-top: 100px;
+    }
+
+    @media only screen and (max-width: 992px) {
+        .card{
+            height: 500px !important;
+            top: 20px;
+        }
+
+        .content{
+            top: 200px !important;
+        }
+
+        h1{
+            font-size: 26px !important;
+        }
+
+        label{
+            font-size: 12px !important;
+        }
+
+        input{
+            height: 30px !important;
+        }
+
+        input::placeholder{
+            font-size: 10px !important;
+        }
+
+        .btn-primary{
+            height:30px !important;
+        }
+
+        button {
+            font-size: 12px !important;
+        }
+      }
+
+      @media only screen and (max-width: 768px) {
+        .card{
+            height: 400px !important;
+            top: 20px;
+        }
+
+        .content{
+            margin-top: 40px !important;
+        }
+
+        
+        .row{
+            margin-top: 100px !important;
+        }
+
+        h1{
+            font-size: 20px !important;
+            margin-top: 20px !important;
+            margin-bottom: 20px !important;
+        }
+
+        label{
+            font-size: 12px !important;
+        }
+
+        input{
+            height: 30px !important;
+        }
+
+        input::placeholder{
+            font-size: 10px !important;
+        }
+
+        .btn-primary{
+            height:30px !important;
+        }
+
+        button {
+            font-size: 12px !important;
+        }
+      }
+
+      @media only screen and (max-width: 768px) {
+        .content{
+            margin: 0 !important;
+        }
+      }

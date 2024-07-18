@@ -21,7 +21,7 @@
                 </li>
             </ul>
             <div class="profile d-flex justify-content-center align-item-center px-2">
-                <a href=""><img src="{{asset('learnelixir/assets/image/profile.png')}}" alt=""></a>
+                <a href=""><img src="{{asset('storage/avatar/'.Auth::user()->avatar)}}" alt="" class="rounded-5"></a>
                 <a href="" class="text-profile">{{Auth::user()->name}}</a>
             </div>
         </div>

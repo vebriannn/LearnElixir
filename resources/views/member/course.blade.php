@@ -48,7 +48,7 @@
                             const courseElement = document.createElement('div');
                             courseElement.className = 'col-lg-4 col-sm-6 mt-sm-4 mt-xl-0 mt-lg-0';
                             courseElement.innerHTML = `
-                                <a href="{{route('member.join')}}">
+                                <a href="#" onclick="getLinkCourse(event, '${course.slug}')">
                                     <div class="card-course mb-5">
                                         <img src="${course.images}" class="img-card" alt="${course.title}" id="imgCourse">
                                             <div class="container-card px-4 mt-2">
@@ -131,7 +131,7 @@
                         courseData.course.forEach(course => {
                             courseElement.className = 'col-lg-4 col-sm-6 mt-sm-4 mt-xl-0 mt-lg-0';
                             courseElement.innerHTML = `
-                                <a href="{{route('member.join')}}">
+                                <a href="#" onclick="getLinkCourse(event, '${course.slug}')">
                                     <div class="card-course mb-5">
                                         <img src="${course.images}" class="img-card" alt="${course.title}" id="imgCourse">
                                             <div class="container-card px-4 mt-2">
@@ -141,17 +141,17 @@
                                                     <div>
                                                         <p class="text-black m-0 p-0 ms-2 fw-bold" id="nama-mentor">${courseData.mentor}</p>
                                                         <p class="text-black m-0 p-0 ms-2" id="nama-mentor" style="font-size: 14px !important;" > ${courseData.divisi}</p>
-                                                        </div>
-                                                        </div>
+                                                    </div>
+                                                </div>
                                                 <div class="status d-flex">
                                                     <img src="https://cdn-icons-png.flaticon.com/512/9800/9800294.png" alt="">
                                                     <p class="text-black" id="lesson">${course.total_lesson} Lessons</p>
                                                     <img src="https://cdn-icons-png.flaticon.com/512/2088/2088617.png" style="height: 20px; margin-top: -1px; margin-left: 10px;" alt="">
                                                     <p class="text-black" id="durasi">${course.duration}</p>
-                                                    </div>
-                                                    </div>
-                                                    </div>
-                                                    </a>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </a>
                                                     `;
                             courseContainer.appendChild(courseElement);
                         });
@@ -162,5 +162,17 @@
 
 
         fetchAndDisplayKategori()
+    </script>
+
+    <script>
+        function getLinkCourse(event, slug) {
+            event.preventDefault();
+            if (slug) {
+                const url = `/member/join/kelas/${slug}`;
+                window.location.href = url;
+            } else {
+                console.error('Slug tidak tersedia.');
+            }
+        }
     </script>
 @endpush

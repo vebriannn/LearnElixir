@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
 
 use App\Models\User;
+use App\Models\Lesson;
 
 class Course extends Model
 {
@@ -21,7 +22,6 @@ class Course extends Model
         'title',
         'deskripsi',
         'images',
-        'link',
         'duration',
         'total_lesson'
     ];
@@ -33,6 +33,10 @@ class Course extends Model
                 'source' => 'title'
             ]
         ];
+    }
+
+    public function lessons() {
+        return $this->hasMany(Lesson::class, 'id_course');
     }
 
     public function user() {

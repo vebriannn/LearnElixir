@@ -33,7 +33,6 @@ class CourseController extends Controller
         $requests->validate([
             'title' => 'required',
             'images' => 'required|image|mimes:jpg,jpeg,png',
-            'link' => 'required',
             'deskripsi' => 'required',
             'kategori' => 'required',
             'duration' => 'required',
@@ -52,7 +51,6 @@ class CourseController extends Controller
             'title' => $requests->title,
             'id_mentor' => 1,
             'images' => $data['images'],
-            'link' => $requests->link,
             'deskripsi' => $requests->deskripsi,
             'kategori' => $requests->kategori,
             'duration' => $requests->duration,
@@ -79,7 +77,6 @@ class CourseController extends Controller
 
         $requests->validate([
             'title' => 'required',
-            'link' => 'required|url',
             'deskripsi' => 'required',
             'kategori' => 'required',
             'duration' => 'required',
@@ -107,7 +104,6 @@ class CourseController extends Controller
             'title' => $requests->title,
             'id_mentor' => $data['id_mentor'],
             'images' => $data['images'],
-            'link' => $requests->link,
             'deskripsi' => $requests->deskripsi,
             'kategori' => $requests->kategori,
             'duration' => $requests->duration,

@@ -56,8 +56,8 @@
                                     </div>
                                     <div class="row g-2 mt-4">
                                         <div class="col-md me-3">
+                                            <label for="image">Upload Image</label>
                                             <div class="form-group col-6 mt-2">
-                                                <label for="image">Upload Image</label>
                                                 <input type="file" class="form-control-file" id="image"
                                                     aria-describedby="imageHelp" name="images">
                                                 @error('images')
@@ -65,21 +65,6 @@
                                                         {{ $message }}
                                                     </span>
                                                 @enderror
-                                            </div>
-                                        </div>
-                                        <div class="col-md ms-3">
-                                            <label for="">Link Video</label>
-                                            <div class="form-floating">
-                                                <div class="form-floating">
-                                                    <input type="url" class="form-control" id="floatingInputGrid"
-                                                        placeholder="name@example.com" name="link">
-                                                    <label for="floatingInputGrid">Link</label>
-                                                    @error('link')
-                                                        <span style="color: red">
-                                                            {{ $message }}
-                                                        </span>
-                                                    @enderror
-                                                </div>
                                             </div>
                                         </div>
                                     </div>

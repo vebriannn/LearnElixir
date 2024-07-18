@@ -20,7 +20,7 @@ class MemberMiddleware
         if(Auth::check()) {
             return $next($request);
         }
-
-        // return ->route('');
+        
+        return redirect()->route('member.login');
     }
 }

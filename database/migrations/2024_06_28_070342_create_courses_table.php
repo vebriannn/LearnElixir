@@ -17,9 +17,8 @@ return new class extends Migration
             $table->string('kategori');
             $table->string('title');
             $table->string('slug');
-            $table->string('deskripsi');
+            $table->longText('deskripsi');
             $table->string('images');
-            $table->string('link');
             $table->string('duration');
             $table->integer('total_lesson');
             $table->timestamps();

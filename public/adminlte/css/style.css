@@ -1,0 +1,435 @@
+@import url(../css/poppins.css);
+
+:root {
+  --c-dark: #383131;
+  --c-brand: #00a3ff;
+  --c-brand-dark: #407c95;
+  --c-brand-light: #2b9ccc;
+  --c-brand-footer: #80deff;
+  --c-brand-contact: #c2efff;
+  --c-brand-rgb: 0, 163, 255;
+  --c-body: #ffffff;
+  --c-gradient: linear-gradient(to top left, #7bdcff 15%, #fff 85%);
+  --font-base: "Poppins", sans-serif;
+  --box-shadow-card: 0px 0px 15px #00a3ff;
+  --box-shadow-card-light: 0px 0px 5px #00a3ff;
+  --transition: all 0.5s ease;
+}
+
+body {
+  font-family: var(--font-base);
+  line-height: 1.7;
+  color: var(--c-body);
+  background: var(--c-gradient);
+  height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color: var(--c-brand-dark);
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--c-brand-dark);
+}
+
+span {
+  color: var(--c-brand);
+}
+
+.text-center-edit {
+  margin: 0 auto;
+}
+
+p {
+  color: var(--c-dark);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.shadow {
+  box-shadow: 0px 0px 10px black;
+}
+
+.big-text {
+  font-size: 45px;
+  font-weight: 700;
+  color: var(--c-dark);
+}
+
+.text-brand-dark {
+  color: #407c95;
+}
+
+.section-padding {
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+
+/* NAVBAR */
+.navbar {
+  box-shadow: var(--box-shadow);
+  border-radius: 20px;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 400;
+  color: var(--c-dark);
+}
+
+.navbar-nav .nav-item .active {
+  color: var(--c-brand);
+  font-weight: 700;
+}
+
+/* BTN */
+.btn {
+  font-weight: 500;
+  padding: 10px 20px;
+}
+
+.btn-brand {
+  border-radius: 5px;
+  background-color: var(--c-brand-light);
+}
+
+.btn-start {
+  border-radius: 20px;
+  color: var(--c-brand);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.btn-start:hover {
+  color: var(--c-brand);
+}
+
+.btn-brand:hover {
+  background-color: var(--c-brand-light);
+}
+
+/* HOME */
+#home {
+  padding-top: 30px;
+  height: auto;
+}
+
+/* ABOUT */
+
+#about .col-8 {
+  padding-top: 162px;
+}
+
+#about .col-4 {
+  padding-top: 282px;
+  padding-left: 30px;
+  z-index: 2;
+}
+
+#about p {
+  width: 407px;
+  padding-top: 47px;
+  padding-bottom: 33px;
+}
+
+#about .btn {
+  border-radius: 15px;
+}
+
+#about img {
+  width: 575px;
+  position: absolute;
+  left: 570px;
+  margin-top: 37px;
+}
+
+/* COURSE */
+#course {
+  padding-top: 88px;
+}
+
+.card {
+  width: 250px;
+  border-radius: 45px;
+  background-color: var(--c-brand);
+  transition: 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: var(--box-shadow-card);
+}
+
+.gradient {
+  width: 225px;
+  height: 180px;
+  background-color: white;
+  border-radius: 40px;
+  overflow: hidden;
+  position: relative;
+}
+
+.gradient::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #7bdcff, #ace7fd, #d4f4ff, #ffff);
+  transition: top 0.5s;
+}
+
+.gradient:hover::after {
+  top: 20%;
+}
+
+.circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #e3f8ff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10; /* Ensure it's above the gradient */
+}
+
+.circle img {
+  width: 50%;
+  height: 50%;
+}
+
+/* CONTACT */
+#contact {
+  background-color: var(--c-brand-contact);
+}
+
+ul {
+  list-style-type: none;
+}
+
+.list-group-edit {
+  list-style-type: none;
+  padding: 26px 0px 16px;
+}
+
+.icon {
+  width: 5%;
+  height: 5%;
+}
+
+li p {
+  padding-left: 10px;
+}
+
+li a {
+  color: #00b4ff;
+}
+
+li a img {
+  width: 40px;
+  height: auto;
+}
+
+.text-font-light {
+  font-weight: 300;
+}
+
+.card-edit {
+  width: 418px;
+  height: 418px;
+  border-radius: 20px;
+  color: var(--c-dark);
+}
+
+.card-edit:hover {
+  box-shadow: var(--box-shadow-card-light);
+}
+
+.form-control {
+  border: none;
+  border-bottom: 1px solid var(--c-brand);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.form-control:focus {
+  border-bottom: 2px solid var(--c-brand);
+  box-shadow: none;
+}
+
+.fw-medium {
+  font-weight: 600px;
+}
+
+button {
+  box-shadow: var(--box-shadow);
+  width: 50%;
+}
+
+footer {
+  background-color: var(--c-brand-footer);
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .card {
+    margin-top: 50px; /* Adjust this value as needed */
+  }
+
+  .navbar-toggler {
+    width: 10%;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .rspv-btn-nav {
+    width: 15%;
+  }
+
+  .btn-container{
+    display: flex;
+  }
+
+  .btn-order-masuk{
+    order: 2;
+  }
+
+  .btn-order-daftar{
+    order: 1;
+  }
+
+  .text-brand-dark {
+    font-size: 14px;
+  }
+
+  .big-text {
+    font-size: 30px;
+    width: 367px;
+  }
+
+  #home p {
+    font-size: 14px;
+    width: 367px;
+  }
+
+  #home .col-7 {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* ABOUT */
+  #about .col-8 {
+    padding-top: 54px;
+  }
+
+  #about a {
+    margin-top: 15px;
+  }
+
+  #about .col-8 p {
+    padding-top: 14px;
+    padding-bottom: 0;
+  }
+
+  #about .col-4 {
+    padding-top: 171px;
+    padding-left: 50px;
+  }
+
+  #about .col-4 h1 {
+    width: 210px;
+  }
+
+  #about .col-4 p {
+    padding-top: 10px;
+  }
+
+  #about .col-4 h1 {
+    font-size: 25px;
+  }
+
+  #about .col-4 p {
+    text-align: justify;
+  }
+
+  #about p {
+    width: 210px;
+  }
+
+  #about img {
+    width: 425px;
+    left: 270px;
+    position: absolute;
+    margin-top: 37px;
+  }
+
+  /* COURSE */
+  #course {
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
+
+  /* CONTACT */
+  #contact li p {
+    font-size: 16px !important;
+  }
+
+  .icon {
+    width: 7%;
+    margin-top: 5px;
+  }
+
+  .icon-loc {
+    margin-top: 15px;
+  }
+
+  #contact li a img {
+    width: 30px;
+    height: auto;
+  }
+
+  #contact ul {
+    padding-top: 0;
+  }
+
+  #contact .card-edit {
+    width: 275px;
+    height: 375px;
+  }
+
+  #contact form{
+    padding: 30px !important;
+  }
+
+  #contact button {
+    width: 140px;
+    margin-top: 10px !important;
+    font-size: 16px;
+  }
+}
+
+@media screen {
+  
+}

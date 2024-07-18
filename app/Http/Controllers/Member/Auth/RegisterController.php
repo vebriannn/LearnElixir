@@ -11,6 +11,11 @@ use Illuminate\Support\Facades\Hash;
 
 class RegisterController extends Controller
 {
+
+    public function index() {
+        return view('member.auth.register');
+    }
+
     public function store(Request $requests) {
 
         $data = $requests->except('_token', '_method');
