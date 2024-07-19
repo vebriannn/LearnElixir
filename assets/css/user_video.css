@@ -85,7 +85,6 @@ img{
 #content h3 {
   font-weight: 600 !important;
   font-size: 30px !important;
-  white-space: nowrap !important;
 }
 
 #content img {
@@ -98,10 +97,6 @@ img{
     width: 100% !important;
   }
 
-  .costum-card{
-    background-color: var(--c-brand) !important;
-    border: none !important;
-  }
 
   .btn-video{
     background-color: var(--c-brand-contact) !important;
@@ -122,6 +117,7 @@ img{
    .btn-video{
     background-color: var(--c-brand-contact);
     color: #383131;
+    width: 80%;
    }
 
    .btn-video img{
@@ -151,7 +147,39 @@ img{
    }
 
    .costum-card{
-    height: 537px !important;
+    background-color: var(--c-brand) !important;
+    border: none !important;
+    height: 491px !important;
     overflow-y: auto;
     overflow-x: hidden;
    }
+
+   .accordion{
+    width: 100% !important;
+   }
+
+   
+
+   @media only screen and (max-width:1200px) {
+    .costum-card{
+      height: 410px !important;
+    }
+  }
+    @media only screen and (max-width:992px) {
+      .costum-card{
+        height: 304px !important;
+      }
+    }
+
+    @media only screen and (max-width:768px) {
+      .costum-card{
+        margin-bottom: 20px;
+      }
+
+   }
+
+   @media only screen and (max-width: 576px) {
+    .logo{
+      display: none;
+    }
+  }

@@ -63,6 +63,12 @@
       justify-content: center;
       align-items: center;
     }
+
+    ul{
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
   
     .text-profile {
       font-weight: 400;
@@ -160,8 +166,7 @@
 }
    #content h3{
     font-weight: 600 !important;
-    font-size: 30px !important;
-    white-space: nowrap !important;
+    font-size: 31px !important;
    }
 
    #content img{
@@ -188,12 +193,17 @@
    .btn-video{
     background-color: var(--c-brand-contact);
     color: #383131;
+    width: 80%;
    }
 
    .btn-video img{
     width: auto;
     height: 70%;
     margin: auto 0;
+   }
+
+   .accordion{
+    width: 100% !important;
    }
    
    .play{
@@ -203,17 +213,18 @@
    }
 
    .btn-play{
-    width: 309px;
     height: 50px;
     border-radius: 10px;
     background-color: var(--c-brand) !important;
     border: none !important;
+    width: 100%;
    }
    
    .costum-card{
-    height: 537px !important;
+    height: 570px !important;
     overflow-y: auto;
     overflow-x: hidden;
+
    }
 
    .card-img-top-costum{
@@ -226,3 +237,22 @@
     border-radius: 15px !important;
     padding: 10px !important;
    }
+
+   @media only screen and (max-width: 1200px) {
+      .costum-card{
+        height: 410px !important;
+      }
+
+      .card{
+        margin-left: 0px !important;
+      }
+
+      
+  }
+
+  @media only screen and (max-width: 576px) {
+    .logo{
+      display: none;
+    }
+    
+}

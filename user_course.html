@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Course</title>
+    <title>LearnElixir</title>
     <link rel="stylesheet" href="./assets/css/adminlte.css">
     <link rel="stylesheet" href="./assets/css/user_course.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -18,11 +18,15 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg bg-white container mt-3  shadow">
         <div class="container mx-3">
-            <a class=" fs-4 fw-bold logo" href="#">Learn<span>Elixir</span></a>
+            <a class=" fs-4 fw-bold logo d-lg-block d-md-none d-sm-none Logo" href="#">Learn<span>Elixir</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <div class="profile px-2 d-block d-lg-none " style="width: 146px;">
+                <a href=""><img src="./assets/image/profile.png" alt="" style="width: 29%;"></a>
+                <a href="" class="text-profile ms-3">Verxxy12</a>
+            </div>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item me-4" id="navbarNav">
@@ -38,36 +42,37 @@
                         <a class="nav-link" href="#contact">Contact Us</a>
                     </li>
                 </ul>
-                <div class="profile d-flex justify-content-center align-item-center px-2">
-                    <a href=""><img src="./assets/image/profile.png" alt=""></a>
-                    <a href="" class="text-profile">Verxxy12</a>
-                </div>
+                    <div class="profile px-2 d-lg-block d-none" style="width: 146px;">
+                        <a href=""><img src="./assets/image/profile.png" alt="" style="width: 29%;"></a>
+                        <a href="" class="text-profile ms-3">Verxxy12</a>
+                    </div>
+
             </div>
         </div>
     </nav>
 
     <!-- CONTENT -->
-    <div class="custom-container" id="content">
+    <div class="container" id="content">
         <h3 class=" mt-5">Belajar Livewire Menengah: Membuat Aplikasi Manajemen Karyawan Sederhana</h3>
         <div class="row mt-4">
-            <div class="col-8">
+            <div class="col-lg-8 col-md-12">
                 <img src="./assets/image/Design.jpg" alt="">
             </div>
-            <div class="col-4">
-                <div class="card costum-card ms-5">
+            <div class="col-lg-4 col-md-12 mt-lg-0 mt-md-3">
+                <div class="card costum-card ">
                     <div class="card-body px-3">
                         <h6 class="fw-bolder">11 lesson (90 mins)</h6>
                         <div class="d-grid gap-2">
                             <div class="accordion" id="accordionPanelsStayOpenExample">
                                 <div class="accordion-item mt-3">
                                     <h2 class="accordion-header">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
-                                            aria-controls="panelsStayOpen-collapseOne">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne"
+                                            aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
                                             Awal
                                         </button>
                                     </h2>
-                                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
                                         <div class="accordion-body">
                                             <button
                                                 class="btn btn-primary btn-video mx-auto mt-3 d-flex justify-content-between"
@@ -94,17 +99,18 @@
                             <div class="accordion" id="accordionPanelsStayOpenExample">
                                 <div class="accordion-item mt-3">
                                     <h2 class="accordion-header">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true"
-                                            aria-controls="panelsStayOpen-collapseTwo">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo"
+                                            aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                                             Properties
                                         </button>
                                     </h2>
-                                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show">
+                                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
                                         <div class="accordion-body">
                                             <button
                                                 class="btn btn-primary btn-video mx-auto mt-3 d-flex justify-content-between"
-                                                type="button" onclick="location.href='./user_video.html';">
+                                                type="button" onclick="location.href='./user_video.html';"
+                                                aria-expanded="false">
                                                 <div class="d-flex play">
                                                     <img src="./assets/image/play.png" alt="">
                                                     <p class="ms-2 my-auto opacity-75">Trailer</p>
@@ -145,7 +151,7 @@
                 membantumu di grup konsultasi, dan jangan lupa tunjukkan karyamu, ya! Go register now and see you in
                 class! </p>
             <h3 class="mt-4">Tools</h3>
-            <div class="card mt-4 mb-4" style="width: 15rem;">
+            <div class="card mt-4 mb-4 ms-4" style="width: 15rem;">
                 <div class="card-body d-flex flex-column">
                     <img src="./assets/image/adobe_xd.png" class="card-img-top-costum mt-3" alt="...">
                     <h5 class="card-title fw-bold mt-3">Adobe XD <br> Software Gratis</h5>
@@ -156,7 +162,7 @@
                 <div class="card-body d-flex flex-column">
                     <img src="./assets/image/adobe_premiere.png" class="card-img-top-costum mt-3" alt="...">
                     <h5 class="card-title fw-bold mt-3">Adobe Premiere Pro <br> Software Gratis</h5>
-                    <a href="#" class="btn btn-primary btn-download mt-4 fw-bold">Download Now</a>
+                    <a href="#" class="btn btn-primary btn-download mt-5 fw-bold">Download Now</a>
                 </div>
             </div>
         </div>

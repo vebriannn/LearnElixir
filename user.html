@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User</title>
+    <title>LearnElixir</title>
     <link rel="stylesheet" href="./assets/css/user.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -16,11 +16,15 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg bg-white container mt-3  shadow">
         <div class="container mx-3">
-            <a class=" fs-4 fw-bold logo" href="#">Learn<span>Elixir</span></a>
+            <a class=" fs-4 fw-bold logo d-lg-block d-md-none d-sm-none Logo" href="#">Learn<span>Elixir</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <div class="profile px-2 d-block d-lg-none " style="width: 146px;">
+                <a href=""><img src="./assets/image/profile.png" alt="" style="width: 29%;"></a>
+                <a href="" class="text-profile ms-3">Verxxy12</a>
+            </div>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item me-4" id="navbarNav">
@@ -36,18 +40,30 @@
                         <a class="nav-link" href="#contact">Contact Us</a>
                     </li>
                 </ul>
-                <div class="profile d-flex justify-content-center align-item-center px-2">
-                    <a href=""><img src="./assets/image/profile.png" alt=""></a>
-                    <a href="" class="text-profile">Verxxy12</a>
-                </div>
+                    <div class="profile px-2 d-lg-block d-none" style="width: 146px;">
+                        <a href=""><img src="./assets/image/profile.png" alt="" style="width: 29%;"></a>
+                        <a href="" class="text-profile ms-3">Verxxy12</a>
+                    </div>
+
             </div>
         </div>
     </nav>
 
     <!-- CONTENT -->
-    <div class="container">
-        <div class="row top d-flex justify-content-between">
-            <div class="col-lg-3 col-sm" style="width: 20%;">
+    <div class="container-sm">
+        <div class="row top d-flex justify-content-between mx-auto" style="width: 95%;">
+            <div class="dropdown">
+                <a class="dropdown-toggle text-black fs-5" href="#"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Category
+                </a>
+              
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">ALL</a></li>
+                  <li><a class="dropdown-item" href="#">Design Grafis</a></li>
+                  <li><a class="dropdown-item" href="#">UI/UX Design</a></li>
+                </ul>
+              </div>
+            <div class="col-lg-3 col-md-4 col-sm-12">
                 <div class="card-category d-flex flex-column">
                     <p class="mx-auto text-center pt-2 pb-1 border-bottom">Category</p>
                     <div class="checkbox ms-3">
@@ -74,140 +90,207 @@
                     </div>
                 </div>
             </div>
-            <div class="col-9 flex-warp row d-flex justify-content-between ">
-                <div class="col-lg-4 col-sm-6 mt-sm-4 mt-xl-0 mt-lg-0">
-                    <a href="user_course.html" onclick="navigateToPage(event, 'user_course.html')">
-                        <div class="card-course">
-                            <img src="./assets/image/Design.jpg" class="img-card" alt="">
-                            <div class="container-card px-4 mt-2">
-                                <p class="text-black" style="margin-top: -10px;">Design Grafis : Belajar Basic</p>
-                                <div class="profile-card d-flex mt-4">
-                                    <a href="" class="img-a"><img src="./assets/image/profile.png" alt="" class="card-img-profile"></a>
-                                    <a href="" class="text-a">
-                                        <p class="text-black">Burhan jualan </p>
-                                    </a>
-                                </div>
-                                <div class="status d-flex">
-                                    <img src="./assets/image/Lesson.png" alt="">
-                                    <p class="text-black">4 Lesson</p>
-                                    <img src="./assets/image/Hours.png" style="height: 20px; margin-top: -1px; margin-left: 10px;" alt="">
-                                    <p class="text-black">4 Hours</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6 mt-sm-4 mt-xl-0 mt-lg-0 ">
-                    <a href="user_course.html" onclick="navigateToPage(event, 'user_course.html')">
-                        <div class="card-course">
-                            <img src="./assets/image/Design.jpg" class="img-card" alt="">
-                            <div class="container-card px-4 mt-2">
-                                <p class="text-black" style="margin-top: -10px;">Design Grafis : Belajar Basic</p>
-                                <div class="profile-card d-flex mt-4">
-                                    <a href="" class="img-a"><img src="./assets/image/profile.png" alt="" class="card-img-profile"></a>
-                                    <a href="" class="text-a">
-                                        <p class="text-black">Burhan jualan </p>
-                                    </a>
-                                </div>
-                                <div class="status d-flex">
-                                    <img src="./assets/image/Lesson.png" alt="">
-                                    <p class="text-black">4 Lesson</p>
-                                    <img src="./assets/image/Hours.png" style="height: 20px; margin-top: -1px; margin-left: 10px;" alt="">
-                                    <p class="text-black">4 Hours</p>
+            <div class="col-lg-9 col-md-7 col-sm-12 row d-flex mx-auto">
+                <div class="scroll row mx-auto pt-1 pb-1 ">
+                    <div class="col-lg-4 col-md-12 col-sm-12  m-mobile first-card">
+                        <a href="user_course.html" onclick="navigateToPage(event, 'user_course.html')">
+                            <div class="card-course">
+                                <img src="./assets/image/Design.jpg" class="img-card" alt="">
+                                <div class="container-card px-4 mt-2">
+                                    <p class="text-black" style="margin-top: -10px;">Design Grafis : Belajar Basic</p>
+                                    <div class="profile-card d-flex mt-lg-3 mt-sm-5">
+                                        <a href="" class="img-a"><img src="./assets/image/profile.png" alt="" class="card-img-profile"></a>
+                                        <a href="" class="text-a">
+                                            <p class="text-black">Burhan jualan </p>
+                                        </a>
+                                    </div>
+                                    <div class="status d-flex">
+                                        <img src="./assets/image/Lesson.png" alt="">
+                                        <p class="text-black">4 Lesson</p>
+                                        <img src="./assets/image/Hours.png" style="height: 20px; margin-top: -1px; margin-left: 10px;" alt="">
+                                        <p class="text-black">4 Hours</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6 mt-sm-4 mt-xl-0 mt-lg-0">
-                    <a href="user_course.html" onclick="navigateToPage(event, 'user_course.html')">
-                        <div class="card-course">
-                            <img src="./assets/image/Design.jpg" class="img-card" alt="">
-                            <div class="container-card px-4 mt-2">
-                                <p class="text-black" style="margin-top: -10px;">Design Grafis : Belajar Basic</p>
-                                <div class="profile-card d-flex mt-4">
-                                    <a href="" class="img-a"><img src="./assets/image/profile.png" alt="" class="card-img-profile"></a>
-                                    <a href="" class="text-a">
-                                        <p class="text-black">Burhan jualan </p>
-                                    </a>
-                                </div>
-                                <div class="status d-flex">
-                                    <img src="./assets/image/Lesson.png" alt="">
-                                    <p class="text-black">4 Lesson</p>
-                                    <img src="./assets/image/Hours.png" style="height: 20px; margin-top: -1px; margin-left: 10px;" alt="">
-                                    <p class="text-black">4 Hours</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6 mt-sm-4 mt-xl-4 mt-lg-0">
-                    <a href="user_course.html" onclick="navigateToPage(event, 'user_course.html')">
-                        <div class="card-course">
-                            <img src="./assets/image/Design.jpg" class="img-card" alt="">
-                            <div class="container-card px-4 mt-2">
-                                <p class="text-black" style="margin-top: -10px;">Design Grafis : Belajar Basic</p>
-                                <div class="profile-card d-flex mt-4">
-                                    <a href="" class="img-a"><img src="./assets/image/profile.png" alt="" class="card-img-profile"></a>
-                                    <a href="" class="text-a">
-                                        <p class="text-black">Burhan jualan </p>
-                                    </a>
-                                </div>
-                                <div class="status d-flex">
-                                    <img src="./assets/image/Lesson.png" alt="">
-                                    <p class="text-black">4 Lesson</p>
-                                    <img src="./assets/image/Hours.png" style="height: 20px; margin-top: -1px; margin-left: 10px;" alt="">
-                                    <p class="text-black">4 Hours</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12  mt-xl-0 mt-lg-0 mt-sm-3 m-mobile">
+                        <a href="user_course.html" onclick="navigateToPage(event, 'user_course.html')">
+                            <div class="card-course">
+                                <img src="./assets/image/Design.jpg" class="img-card" alt="">
+                                <div class="container-card px-4 mt-2">
+                                    <p class="text-black" style="margin-top: -10px;">Design Grafis : Belajar Basic</p>
+                                    <div class="profile-card d-flex mt-lg-3 mt-sm-5">
+                                        <a href="" class="img-a"><img src="./assets/image/profile.png" alt="" class="card-img-profile"></a>
+                                        <a href="" class="text-a">
+                                            <p class="text-black">Burhan jualan </p>
+                                        </a>
+                                    </div>
+                                    <div class="status d-flex">
+                                        <img src="./assets/image/Lesson.png" alt="">
+                                        <p class="text-black">4 Lesson</p>
+                                        <img src="./assets/image/Hours.png" style="height: 20px; margin-top: -1px; margin-left: 10px;" alt="">
+                                        <p class="text-black">4 Hours</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6 mt-sm-4 mt-xl-4 mt-lg-0">
-                    <a href="user_course.html" onclick="navigateToPage(event, 'user_course.html')">
-                        <div class="card-course">
-                            <img src="./assets/image/Design.jpg" class="img-card" alt="">
-                            <div class="container-card px-4 mt-2">
-                                <p class="text-black" style="margin-top: -10px;">Design Grafis : Belajar Basic</p>
-                                <div class="profile-card d-flex mt-4">
-                                    <a href="" class="img-a"><img src="./assets/image/profile.png" alt="" class="card-img-profile"></a>
-                                    <a href="" class="text-a">
-                                        <p class="text-black">Burhan jualan </p>
-                                    </a>
-                                </div>
-                                <div class="status d-flex">
-                                    <img src="./assets/image/Lesson.png" alt="">
-                                    <p class="text-black">4 Lesson</p>
-                                    <img src="./assets/image/Hours.png" style="height: 20px; margin-top: -1px; margin-left: 10px;" alt="">
-                                    <p class="text-black">4 Hours</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6 mt-sm-4 mt-xl-4 mt-lg-0">
-                    <a href="user_course.html" onclick="navigateToPage(event, 'user_course.html')">
-                        <div class="card-course">
-                            <img src="./assets/image/Design.jpg" class="img-card" alt="">
-                            <div class="container-card px-4 mt-2">
-                                <p class="text-black" style="margin-top: -10px;">Design Grafis : Belajar Basic</p>
-                                <div class="profile-card d-flex mt-4">
-                                    <a href="" class="img-a"><img src="./assets/image/profile.png" alt="" class="card-img-profile"></a>
-                                    <a href="" class="text-a">
-                                        <p class="text-black">Burhan jualan </p>
-                                    </a>
-                                </div>
-                                <div class="status d-flex">
-                                    <img src="./assets/image/Lesson.png" alt="">
-                                    <p class="text-black">4 Lesson</p>
-                                    <img src="./assets/Hours.png" style="height: 20px; margin-top: -1px; margin-left: 10px;" alt="">
-                                    <p class="text-black">4 Hours</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12  mt-xl-0 mt-lg-0 mt-sm-3 m-mobile">
+                        <a href="user_course.html" onclick="navigateToPage(event, 'user_course.html')">
+                            <div class="card-course">
+                                <img src="./assets/image/Design.jpg" class="img-card" alt="">
+                                <div class="container-card px-4 mt-2">
+                                    <p class="text-black" style="margin-top: -10px;">Design Grafis : Belajar Basic</p>
+                                    <div class="profile-card d-flex mt-lg-3 mt-sm-5">
+                                        <a href="" class="img-a"><img src="./assets/image/profile.png" alt="" class="card-img-profile"></a>
+                                        <a href="" class="text-a">
+                                            <p class="text-black">Burhan jualan </p>
+                                        </a>
+                                    </div>
+                                    <div class="status d-flex">
+                                        <img src="./assets/image/Lesson.png" alt="">
+                                        <p class="text-black">4 Lesson</p>
+                                        <img src="./assets/image/Hours.png" style="height: 20px; margin-top: -1px; margin-left: 10px;" alt="">
+                                        <p class="text-black">4 Hours</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12  mt-xl-4 mt-md-3 mt-sm-3 m-mobile">
+                        <a href="user_course.html" onclick="navigateToPage(event, 'user_course.html')">
+                            <div class="card-course">
+                                <img src="./assets/image/Design.jpg" class="img-card" alt="">
+                                <div class="container-card px-4 mt-2">
+                                    <p class="text-black" style="margin-top: -10px;">Design Grafis : Belajar Basic</p>
+                                    <div class="profile-card d-flex mt-lg-3 mt-sm-5">
+                                        <a href="" class="img-a"><img src="./assets/image/profile.png" alt="" class="card-img-profile"></a>
+                                        <a href="" class="text-a">
+                                            <p class="text-black">Burhan jualan </p>
+                                        </a>
+                                    </div>
+                                    <div class="status d-flex">
+                                        <img src="./assets/image/Lesson.png" alt="">
+                                        <p class="text-black">4 Lesson</p>
+                                        <img src="./assets/image/Hours.png" style="height: 20px; margin-top: -1px; margin-left: 10px;" alt="">
+                                        <p class="text-black">4 Hours</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12  mt-xl-4 mt-md-3 mt-sm-3 m-mobile">
+                        <a href="user_course.html" onclick="navigateToPage(event, 'user_course.html')">
+                            <div class="card-course">
+                                <img src="./assets/image/Design.jpg" class="img-card" alt="">
+                                <div class="container-card px-4 mt-2">
+                                    <p class="text-black" style="margin-top: -10px;">Design Grafis : Belajar Basic</p>
+                                    <div class="profile-card d-flex mt-lg-3 mt-sm-5">
+                                        <a href="" class="img-a"><img src="./assets/image/profile.png" alt="" class="card-img-profile"></a>
+                                        <a href="" class="text-a">
+                                            <p class="text-black">Burhan jualan </p>
+                                        </a>
+                                    </div>
+                                    <div class="status d-flex">
+                                        <img src="./assets/image/Lesson.png" alt="">
+                                        <p class="text-black">4 Lesson</p>
+                                        <img src="./assets/image/Hours.png" style="height: 20px; margin-top: -1px; margin-left: 10px;" alt="">
+                                        <p class="text-black">4 Hours</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12  mt-xl-4 mt-md-3 mt-sm-3 m-mobile">
+                        <a href="user_course.html" onclick="navigateToPage(event, 'user_course.html')">
+                            <div class="card-course">
+                                <img src="./assets/image/Design.jpg" class="img-card" alt="">
+                                <div class="container-card px-4 mt-2">
+                                    <p class="text-black" style="margin-top: -10px;">Design Grafis : Belajar Basic</p>
+                                    <div class="profile-card d-flex mt-lg-3 mt-sm-5">
+                                        <a href="" class="img-a"><img src="./assets/image/profile.png" alt="" class="card-img-profile"></a>
+                                        <a href="" class="text-a">
+                                            <p class="text-black">Burhan jualan </p>
+                                        </a>
+                                    </div>
+                                    <div class="status d-flex">
+                                        <img src="./assets/image/Lesson.png" alt="">
+                                        <p class="text-black">4 Lesson</p>
+                                        <img src="./assets/image/Hours.png" style="height: 20px; margin-top: -1px; margin-left: 10px;" alt="">
+                                        <p class="text-black">4 Hours</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12  mt-xl-4 mt-md-3 mt-sm-3 m-mobile">
+                        <a href="user_course.html" onclick="navigateToPage(event, 'user_course.html')">
+                            <div class="card-course">
+                                <img src="./assets/image/Design.jpg" class="img-card" alt="">
+                                <div class="container-card px-4 mt-2">
+                                    <p class="text-black" style="margin-top: -10px;">Design Grafis : Belajar Basic</p>
+                                    <div class="profile-card d-flex mt-lg-3 mt-sm-5">
+                                        <a href="" class="img-a"><img src="./assets/image/profile.png" alt="" class="card-img-profile"></a>
+                                        <a href="" class="text-a">
+                                            <p class="text-black">Burhan jualan </p>
+                                        </a>
+                                    </div>
+                                    <div class="status d-flex">
+                                        <img src="./assets/image/Lesson.png" alt="">
+                                        <p class="text-black">4 Lesson</p>
+                                        <img src="./assets/image/Hours.png" style="height: 20px; margin-top: -1px; margin-left: 10px;" alt="">
+                                        <p class="text-black">4 Hours</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12  mt-xl-4 mt-md-3 mt-sm-3 m-mobile">
+                        <a href="user_course.html" onclick="navigateToPage(event, 'user_course.html')">
+                            <div class="card-course">
+                                <img src="./assets/image/Design.jpg" class="img-card" alt="">
+                                <div class="container-card px-4 mt-2">
+                                    <p class="text-black" style="margin-top: -10px;">Design Grafis : Belajar Basic</p>
+                                    <div class="profile-card d-flex mt-lg-3 mt-sm-5">
+                                        <a href="" class="img-a"><img src="./assets/image/profile.png" alt="" class="card-img-profile"></a>
+                                        <a href="" class="text-a">
+                                            <p class="text-black">Burhan jualan </p>
+                                        </a>
+                                    </div>
+                                    <div class="status d-flex">
+                                        <img src="./assets/image/Lesson.png" alt="">
+                                        <p class="text-black">4 Lesson</p>
+                                        <img src="./assets/image/Hours.png" style="height: 20px; margin-top: -1px; margin-left: 10px;" alt="">
+                                        <p class="text-black">4 Hours</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12  mt-xl-4 mt-md-3 mt-sm-3 m-mobile">
+                        <a href="user_course.html" onclick="navigateToPage(event, 'user_course.html')">
+                            <div class="card-course">
+                                <img src="./assets/image/Design.jpg" class="img-card" alt="">
+                                <div class="container-card px-4 mt-2">
+                                    <p class="text-black" style="margin-top: -10px;">Design Grafis : Belajar Basic</p>
+                                    <div class="profile-card d-flex mt-lg-3 mt-sm-5">
+                                        <a href="" class="img-a"><img src="./assets/image/profile.png" alt="" class="card-img-profile"></a>
+                                        <a href="" class="text-a">
+                                            <p class="text-black">Burhan jualan </p>
+                                        </a>
+                                    </div>
+                                    <div class="status d-flex">
+                                        <img src="./assets/image/Lesson.png" alt="">
+                                        <p class="text-black">4 Lesson</p>
+                                        <img src="./assets/image/Hours.png" style="height: 20px; margin-top: -1px; margin-left: 10px;" alt="">
+                                        <p class="text-black">4 Hours</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-
             </div>
         </div>
         <script src="./assets/js/javascript.js"></script>

@@ -69,6 +69,7 @@ span {
     color: var(--c-dark);
   }
 
+
   /* CONTENT */
   .top{
     padding-top: 65px;
@@ -76,6 +77,7 @@ span {
 
   .card-category{
     background-color: var(--c-brand);
+    width: 100%;
     height: 580px;
     border: 0;
     border-radius: 10px;
@@ -92,8 +94,8 @@ span {
 
   .card-course{
     border: none;
-    height: 320px;
-    width: 85%;
+    height: 300px;
+    width: 90%;
     border-radius: 10px;
     box-shadow: 0px 0px 4px black;
     padding: 0;
@@ -112,6 +114,11 @@ span {
     font-weight: 400;
   }
 
+  .profile-card{
+    height: auto !important;
+    width: 100%;
+
+  }
 
   .img-card{
     width: 100%;
@@ -123,13 +130,10 @@ span {
 
   .img-a{
     width: 15%;
-    height: auto;
   }
 
   .text-a{
     margin-left: 15px;
-    justify-content: center;
-    margin-top: 3px;
   }
 
   .card-img-profile{
@@ -139,12 +143,143 @@ span {
  .status{
   height: 15px;
   padding-left: 5px;
-  margin-top: 5px;
+  margin-top: 15px;
+  width: 100%;
  }
 
  .status p{
-  margin-top: -2px;
   margin-left: 5px;
   font-size: 12px;
+  height: 100%;
+  width: 100%;
   font-weight: normal;
  }
+
+.scroll{
+  overflow-y: auto;
+  height: 580px !important; 
+}
+
+.scroll::-webkit-scrollbar{
+  display: none;
+}
+
+.dropdown{
+  display: none;
+}
+
+ @media only screen and (max-width: 1200px) {
+  .card-course{
+    width: 100%;
+  }
+  
+  .img-a{
+    width: 20%;
+  }
+
+  .text-a{
+    margin-left: 6px;
+  }
+
+  .status p{
+    font-size: 12px;
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (max-width: 991.5px) {
+  .card-course{
+    height: 374px;
+  }
+
+  .img-a{
+    width: 9%;
+  }
+
+
+}
+
+@media only screen and (max-width: 767.5px) {
+  .card-course{
+    height: 460px;
+    width: 100% !important;
+  }
+
+  .rspv-margin{
+    margin-top: 20px !important;
+  }
+
+  .card-category{
+    height: 250px;
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .first-card{
+    margin-top: 16px !important;
+  }
+
+  .scroll{
+    margin-top: 20px !important;
+  }
+  
+  .col-sm-12{
+    padding: 0px !important;
+  }
+
+  .card-course{
+    height: 500px;
+  }
+
+  .text-a{
+    margin-top: 4px;
+    margin-left: 10px;
+  }
+
+  .status{
+    margin-top: 40px;
+  }
+
+  .col-lg-3{
+    display: none;
+  }
+
+
+  .scroll{
+    overflow: unset;
+    height: max-content;
+  }
+
+  .dropdown{
+    display: flex;
+  }
+  
+  .profile-card{
+    margin-top: 40px !important;
+  }
+}
+
+
+@media only screen and (max-width: 576px) {
+  .logo{
+    display: none;
+  }
+
+  .text-a{
+    margin-top: 6px;
+    margin-left: 15px;
+  }
+
+  .status{
+    margin-top: 35px !important;
+  }
+
+  .card-course{
+    height: 500px !important;
+  }
+
+  .m-mobile{
+    margin-top: 10px !important;
+  }
+
+}
