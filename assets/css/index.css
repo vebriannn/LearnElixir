@@ -60,6 +60,10 @@ p {
   color: var(--c-dark);
 }
 
+span{
+  color: var(--c-brand-dark);
+}
+
 .text-blue {
   color: var(--c-brand);
   text-align: justify;
@@ -109,6 +113,10 @@ img {
 .navbar-nav .nav-item .active {
   color: var(--c-brand);
   font-weight: 700;
+}
+
+.navbar-toggler{
+  width: auto;
 }
 
 /* BTN */
@@ -162,6 +170,10 @@ img {
 
 #about .btn {
   border-radius: 15px;
+}
+
+.empty{
+  display: none;
 }
 
 /* #about img {
@@ -461,6 +473,27 @@ footer {
   }
 }
 
+@media (min-width:768px) and  (max-width:992px) {
+  .img-about{
+    display: none;
+  }
 
+  .empty{
+    display: block;
+  }
+
+  .text-about{
+    width: 40%;
+  }
+
+  .tentang{
+    margin-top: 0px !important;
+  }
+
+  .tentang p{
+    width: 100% !important; 
+  }
+
+}
 
 
