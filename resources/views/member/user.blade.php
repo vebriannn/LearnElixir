@@ -41,8 +41,8 @@
                                         @foreach ($sources as $source)
                                             <div id="panelsStayOpen-collapse-{{ $lesson->id }}"
                                                 class="accordion-collapse collapse ">
-                                                @if ($source->sources != null)
-                                                    @if ($source->sources->id_lesson == $lesson->id)
+                                                @if ($source !== null)
+                                                    @if ($source->id_lesson == $lesson->id)
                                                         <div class="accordion-body">
                                                             <div
                                                                 class="btn btn-primary btn-video mx-auto mt-3 d-flex justify-content-between">
@@ -50,9 +50,9 @@
                                                                     <img src="{{ asset('learnelixir/assets/image/play.png') }}"
                                                                         alt="">
                                                                     <p class="ms-2 my-auto opacity-75">
-                                                                        {{ $source->sources->name_source }}</p>
+                                                                        {{ $source->name_source }}</p>
                                                                 </div>
-                                                                <p class="my-auto opacity-75">{{ $source->sources->time_source }}</p>
+                                                                <p class="my-auto opacity-75">{{ $source->time_source }}</p>
                                                             </div>
                                                         </div>
                                                     @endif

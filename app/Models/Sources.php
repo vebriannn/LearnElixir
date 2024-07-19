@@ -14,11 +14,13 @@ class Sources extends Model
     protected $table = 'tbl_sources';
 
     protected $fillable = [
+        'id_lesson',
         'name_source',
+        'time_source',
         'link_source',
     ];
 
     public function lessons() {
-        return $this->hasMany(Lesson::class, 'id_lesson');
+        return $this->belongsTo(Lesson::class, 'id_lesson');
     }
 }

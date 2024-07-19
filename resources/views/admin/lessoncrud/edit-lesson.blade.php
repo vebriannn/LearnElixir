@@ -16,7 +16,7 @@
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-end">
                             <li class="breadcrumb-item"><a href="{{ route('admin.course') }}">Course</a></li>
-                            <li class="breadcrumb-item"><a href="{{ route('admin.lesson', $id) }}">Lesson</a></li>
+                            <li class="breadcrumb-item"><a href="{{ route('admin.lesson', ['id_course' => $id_course]) }}">Lesson</a></li>
                             <li class="breadcrumb-item active" aria-current="page">
                                 Edit Lesson
                             </li>
@@ -39,9 +39,10 @@
                         </div>
                         <div class="card-body">
                             <div class="container-fluid">
-                                <form action="{{ route('admin.lesson.edit.update', ['id' => $id, 'id_lesson' => $lesson->id]) }}" method="POST"
+                                <form action="{{ route('admin.lesson.edit.update', ['id_course' => $id_course, 'id_lesson' => $id_lesson]) }}" method="POST"
                                     enctype="multipart/form-data">
                                     @csrf
+                                    @method('PUT')
                                     <div class="col-12 me-3">
                                         <label for="">Title Lesson</label>
                                         <div class="form-floating">

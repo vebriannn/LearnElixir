@@ -11,6 +11,7 @@ use Illuminate\Support\Str;
 use App\Models\User;
 use App\Models\Course;
 use App\Models\Kategori;
+use App\Models\Lesson;
 use RealRashid\SweetAlert\Facades\Alert;
 use Cviebrock\EloquentSluggable\Sluggable;
 
@@ -117,9 +118,16 @@ class CourseController extends Controller
 
     public function delete($id) {
         $course = Course::where('id', $id)->first();
-        Storage::disk('public')->delete('courseImages/'.$course->images);
-        $course->delete();
-        Alert::success('Success', 'Data Berhasil Di Hapus');
+        
+        $lesson = Lesson::where('id_course', $id)->first();
+        if(!$lesson) {
+            Storage::disk('public')->delete('courseImages/'.$course->images);
+            $course->delete();
+            Alert::success('Success', 'Data Berhasil Di Hapus');
+        }
+        else {
+            Alert::info('Gagal', 'Maaf Anda Tidak Hapus Data Course, Karena Anda Masih Menyimpan Data Lesson Dan Sources');
+        }
         return redirect()->route('admin.course');
     }
 }

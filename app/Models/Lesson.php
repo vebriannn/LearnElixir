@@ -24,6 +24,6 @@ class Lesson extends Model
     }
 
     public function sources() {
-        return $this->belongsTo(Sources::class, 'id');
+        return $this->hasMany(Sources::class, 'id_lesson');
     }
 }

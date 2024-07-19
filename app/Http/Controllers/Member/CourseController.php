@@ -8,7 +8,6 @@ use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Facades\Auth;
 
 use App\Models\Course;
-use App\Models\Kategori;
 use App\Models\Lesson;
 use App\Models\Sources;
 
@@ -25,7 +24,7 @@ class CourseController extends Controller
         $course = Course::with('lessons')->where('slug', $slug)->firstOrFail();
         $sources = Lesson::with('sources')->get();
         
-        // dd($sources);
+        dd($sources);
         return view('member.user', compact('course', 'sources'));
     }
 }
